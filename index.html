@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>1 year together</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Space Mono', monospace;
+      color: #fff;
+      min-height: 100vh;
+      background-color: #000;
+      background-image:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+        url('images/fundo.jpeg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      /* Fundo fixo */
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 16px 12px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .rel {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      /* ligeiramente maior para conforto */
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.15);
+      /* fundo branco transparente mais suave */
+      backdrop-filter: blur(10px);
+      color: #f5f5f5;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+      display: inline-block;
+      letter-spacing: 1.5px;
+      user-select: none;
+      box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
+    }
+
+    .dias {
+      font-size: 0.65rem;
+      margin-bottom: 3px;
+      display: block;
+      color: #ddd;
+    }
+
+    #hora {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #eee;
+    }
+
+    .post img {
+      width: 75%;
+      /* antes era 85% */
+      height: auto;
+      aspect-ratio: 4 / 3;
+      border-radius: 12px;
+      border: 6px solid rgba(255, 255, 255, 0.35);
+      box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.75),
+        0 0 20px rgba(255, 255, 255, 0.2);
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+      backdrop-filter: blur(7px);
+    }
+
+    .post video {
+      width: 85%;
+      height: auto;
+      max-height: 260px;
+      /* antes era 280px */
+      border-radius: 12px;
+      border: 6px solid rgba(255, 255, 255, 0.35);
+      box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.75),
+        0 0 20px rgba(255, 255, 255, 0.2);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 24px;
+      backdrop-filter: blur(7px);
+    }
+
+    .post audio {
+      width: 85%;
+      max-width: 260px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      outline: none;
+      box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .caption {
+      font-size: 0.65rem;
+      /* menor */
+      color: #ddd;
+      margin-bottom: 18px;
+      /* antes 20px */
+      font-style: italic;
+      line-height: 1.2;
+    }
+
+    .texto {
+      text-align: justify;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .post {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 16px 10px;
+      }
+
+      h1 {
+        font-size: 1rem;
+        margin-bottom: 14px;
+      }
+
+      .rel {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+        margin-bottom: 18px;
+        border-radius: 12px;
+      }
+
+      .dias {
+        font-size: 0.6rem;
+      }
+
+      #hora {
+        font-size: 0.85rem;
+      }
+
+      .post audio {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .caption {
+        font-size: 0.7rem;
+        margin-bottom: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>We`re together..</h1>
+    <div class="contador">
+      <div class="rel">
+        <span class="dias" id="dias"></span>
+        <span id="hora"></span>
+      </div>
+    </div>
+
+    <div class="post">
+      <img src="images/foto1.jpeg" alt="Nossa foto 1" />
+      <p class="caption">It didn't feel like the start of something, but it was.</p>
+    </div>
+
+    <div class="post">
+      <video controls muted playsinline>
+        <source src="images/video1.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+      <p class="caption">Always us.</p>
+    </div>
+
+    <div class="post">
+      <audio controls>
+        <source src="images/yellow.mp3" type="audio/mpeg" />
+      </audio>
+      <p class="caption">"Look at the stars, look how they shine for you, and all the things that you do"</p>
+    </div>
+
+    <div class="post">
+      <img src="images/foto2.jpeg" alt="Nossa foto 2" />
+      <p class="caption">One year later, and it's still you.</p>
+    </div>
+    <div class="post">
+      <img src="images/foto3.jpeg" alt="Nossa foto 1" />
+      <p class="caption">07.05 - I asked you to play, not knowing we'd be this close today</p>
+    </div>
+    <div class="post">
+      <video controls muted playsinline>
+        <source src="images/video2.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+      <p class="caption"></p>
+    </div>
+    <div class="post">
+      <audio controls>
+        <source src="images/one life.mp3" type="audio/mpeg" />
+        Seu navegador não suporta áudio.
+      </audio>
+      <p class="caption">"The only thing i want in life, and i only wanna live it with you"</p>
+    </div>
+    <div class="post">
+      <img src="images/foto5.jpeg" alt="Nossa foto 1" />
+      <p class="caption">25.05 - Thats when I knew I cared for you and wanted to be with no one else but you.</p>
+    </div>
+    <div class="post">
+      <video controls muted playsinline>
+        <source src="images/video4.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <div class="post">
+      <img src="images/foto6.jpeg" alt="Nossa foto 1" />
+      <p class="caption">11.07 - The day I asked you to be mine officially, i only became sure my feelings were true.
+      </p>
+    </div>
+    <div class="post">
+      <video controls muted playsinline>
+        <source src="images/video5.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <div class="post">
+      <video controls muted playsinline>
+        <source src="images/video6.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <div class="post">
+      <video controls muted playsinline>
+        <source src="images/video7.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <div class="post">
+      <video controls muted playsinline>
+        <source src="images/video9.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+      <p class="texto">Amor, hoje faz 1 ano que a gente tá junto, e eu ainda fico pensando como tudo começou e como, de
+        um jeito tão natural, você virou a melhor parte da minha vida.
+        Sério, eu nunca pensei que alguém pudesse me fazer tão bem assim. Você foi me ganhando aos poucos e se tornou
+        tudo o que eu precisava. Você me entende, me escuta, me apoia e, acima de tudo, me faz sentir amado. E isso vale
+        mais do que qualquer coisa. Já passamos por muitas coisas que só nos fizeram crescer e amadurecer juntos, tudo
+        isso só me fez ter a certeza de que é com você que eu quero continuar vivendo tudo. Obrigado por ser a pessoa em
+        que mais confio, pela sua lealdade. Não tem texto no mundo que consiga explicar exatamente o quanto você
+        significa pra mim. Mas eu queria deixar registrado, pelo menos, o quanto eu sou grato por todos esses meses
+        juntos. Obrigado por ser paciente comigo, por me ensinar, por me mostrar o que é amar de verdade.
+        Feliz 1 ano pra gente, meu amor. Que seja pra sempre assim.
+        Eu te amo infinitamente, pra sempre.</p>
+    </div>
+  </div>
+
+  <script>
+    const dataInicio = new Date("2024-07-10T00:00:00");
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = agora - dataInicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+      const m = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+      const s = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+      document.getElementById("dias").textContent = `${dias} dias`;
+      document.getElementById("hora").textContent = `${h}:${m}:${s}`;
+    }
+
+    atualizarContador();
+    setInterval(atualizarContador, 1000);
+  </script>
+</body>
+
+</html>
